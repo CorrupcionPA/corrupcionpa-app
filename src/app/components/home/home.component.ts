@@ -1,16 +1,16 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { NzListModule } from 'ng-zorro-antd/list';
-import {NzMessageService} from 'ng-zorro-antd/message'
+import { Component } from '@angular/core'
+import { CommonModule } from '@angular/common'
+import { NzListModule } from 'ng-zorro-antd/list'
+import { NzMessageService } from 'ng-zorro-antd/message'
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule, NzListModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  constructor(public msg:NzMessageService){}
+  constructor(public msg: NzMessageService) {}
 
   data = [
     'Presidentes',
@@ -18,8 +18,6 @@ export class HomeComponent {
     'Ministros',
     'Alcaldes',
     'Representantes',
-    'Partidos politicos'
+    'Partidos politicos',
   ]
 }
-
-
