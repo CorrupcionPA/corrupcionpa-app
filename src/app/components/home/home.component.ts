@@ -1,14 +1,25 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
-import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb'
+import { NzListModule } from 'ng-zorro-antd/list';
+import {NzMessageService} from 'ng-zorro-antd/message'
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NzListModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  constructor(public msg:NzMessageService){}
 
+  data = [
+    'Presidentes',
+    'Diputados',
+    'Ministros',
+    'Alcaldes',
+    'Representantes',
+    'Partidos politicos'
+  ]
 }
+
+
