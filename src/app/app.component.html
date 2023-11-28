@@ -1,13 +1,7 @@
-<nz-page-header class="site-page-header" nzTitle="Corrupcion.app">
-  <nz-breadcrumb nz-page-header-breadcrumb>
-    <nz-breadcrumb-item>First-level Menu</nz-breadcrumb-item>
-    <nz-breadcrumb-item>
-      <a>Second-level Menu</a>
-    </nz-breadcrumb-item>
-    <nz-breadcrumb-item>Third-level Menu</nz-breadcrumb-item>
+<nz-page-header nzTitle="Corrupcion.app">
+  <nz-breadcrumb nz-page-header-breadcrumb [nzAutoGenerate]="true">
   </nz-breadcrumb>
 </nz-page-header>
-
 <div class="app-main">
   <router-outlet></router-outlet>
 </div>
