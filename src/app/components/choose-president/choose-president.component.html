@@ -18,7 +18,10 @@
       margin-bottom: 30px;
     "
     *ngFor="let president of presidents">
-    <h3>{{ president.name }}</h3>
-    <p>{{ president.start }} - {{ president.ending }}</p>
+    <h3>{{ president.nombre }}</h3>
+    <p>
+      {{ president.inicioPeriodo | date: 'YYYY' }} -
+      {{ president.finPeriodo | date: 'YYYY' }}
+    </p>
   </nz-card>
 </div>
