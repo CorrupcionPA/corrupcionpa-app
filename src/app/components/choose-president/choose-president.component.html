@@ -8,16 +8,8 @@
 
 <h2>Elija un presidente</h2>
 
-<div class="cards-presidents">
-  <nz-card
-    style="
-      position: relative;
-      width: 240px;
-      height: 102px;
-      margin-left: 60px;
-      margin-bottom: 30px;
-    "
-    *ngFor="let president of presidents">
+<div class="cards-container">
+  <nz-card style="width: 15rem" *ngFor="let president of presidents">
     <h3>{{ president.nombre }}</h3>
     <p>
       {{ president.inicioPeriodo | date: 'YYYY' }} -
