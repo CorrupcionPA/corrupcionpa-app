@@ -2,10 +2,11 @@ import { Component } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { NzListModule } from 'ng-zorro-antd/list'
 import { NzMessageService } from 'ng-zorro-antd/message'
+import { RouterModule } from '@angular/router'
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, NzListModule],
+  imports: [CommonModule, NzListModule, RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
