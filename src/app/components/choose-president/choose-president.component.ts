@@ -6,6 +6,7 @@ import { NzListModule } from 'ng-zorro-antd/list'
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb'
 import { NzPageHeaderModule } from 'ng-zorro-antd/page-header'
 import { Politico } from '../../types/Politico'
+import { Router } from '@angular/router'
 @Component({
   selector: 'app-choose-president',
   standalone: true,
@@ -21,9 +22,6 @@ import { Politico } from '../../types/Politico'
   styleUrl: './choose-president.component.scss',
 })
 export class ChoosePresidentComponent {
-  onBack(): void {
-    console.log('onBack')
-  }
   presidents: Politico[] = [
     {
       id: '1',
@@ -47,4 +45,8 @@ export class ChoosePresidentComponent {
       finPeriodo: new Date('2014-01-01'),
     },
   ]
+  constructor(private router: Router) {}
+  onBack(): void {
+    this.router.navigate(['/home'])
+  }
 }
