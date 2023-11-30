@@ -1,0 +1,24 @@
+<nz-page-header
+  style="margin: 0; padding: 0"
+  class="site-page-header"
+  (nzBack)="onBack()"
+  nzBackIcon
+  nzTitle="Presidentes"
+  nzSubtitle="Corrupción"></nz-page-header>
+
+<h2>Elija un presidente</h2>
+
+<div class="cards-presidents">
+  <nz-card
+    style="
+      position: relative;
+      width: 240px;
+      height: 102px;
+      margin-left: 60px;
+      margin-bottom: 30px;
+    "
+    *ngFor="let president of presidents">
+    <h3>{{ president.name }}</h3>
+    <p>{{ president.start }} - {{ president.ending }}</p>
+  </nz-card>
+</div>
